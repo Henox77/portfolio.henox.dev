@@ -1,0 +1,8 @@
+# Netlify detects Next.js and adds its runtime on its own; this only pins the
+# build so a dashboard change can't silently drift from the repo.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"

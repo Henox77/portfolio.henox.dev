@@ -1,0 +1,509 @@
+{
+  "generatedAt": "2026-10-31T12:09:15.689Z",
+  "commits": [
+    {
+      "id": "6c5fa490480f",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Skor tablosu: Netlify Blobs'a doğrudan istek, deploy context'i build'de göm (#1)",
+      "repo": "Henox77/portfolio.henox.dev",
+      "url": "https://github.com/Henox77/portfolio.henox.dev/commit/6c5fa490480f15c25aac0a5fdaec7d367324e8b0",
+      "language": "TypeScript",
+      "at": "2026-10-31T10:42:42Z"
+    },
+    {
+      "id": "ac635f32110e",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "feat: complete end-to-end i18n optimization and add customization guide to README",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/ac635f32110e798d1e242e3e8fa0d12b9d433f1c",
+      "language": "JavaScript",
+      "at": "2026-10-29T20:07:50Z"
+    },
+    {
+      "id": "ca6f63ff748a",
+      "visibility": "public",
+      "kind": "docs",
+      "message": "docs: remove deployment references and email from repo",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/ca6f63ff748ad78be3dd55679ad38262e210c302",
+      "language": "JavaScript",
+      "at": "2026-10-29T19:58:24Z"
+    },
+    {
+      "id": "c9693886c85b",
+      "visibility": "public",
+      "kind": "docs",
+      "message": "docs: streamline README for personal developer portfolio",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/c9693886c85bc99c52b04fc85b841e48c72c5f0e",
+      "language": "JavaScript",
+      "at": "2026-10-29T19:54:27Z"
+    },
+    {
+      "id": "a6beefd6b218",
+      "visibility": "public",
+      "kind": "refactor",
+      "message": "refactor: remove handcrafted badge, X link, and Istanbul note from footer",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/a6beefd6b218653720f883d9acee922bb8c105ae",
+      "language": "JavaScript",
+      "at": "2026-10-29T19:41:21Z"
+    },
+    {
+      "id": "97001a16671c",
+      "visibility": "public",
+      "kind": "refactor",
+      "message": "refactor: simplify and professionalize site copy and metadata",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/97001a16671cbf033ed32e578d9b15a15a68cacb",
+      "language": "JavaScript",
+      "at": "2026-10-29T19:34:19Z"
+    },
+    {
+      "id": "dca108686eba",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "feat: make site config bilingual, remove mail form and dc/linkedin from footer",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/dca108686eba58e2aef894c502fe7d0522fee4ef",
+      "language": "JavaScript",
+      "at": "2026-10-29T19:26:14Z"
+    },
+    {
+      "id": "6c0f42ddbc0b",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "feat: fetch public repositories dynamically from GitHub API and show modern repo cards",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/6c0f42ddbc0bcea9855b94b542443e0340d93742",
+      "language": "JavaScript",
+      "at": "2026-10-29T19:18:18Z"
+    },
+    {
+      "id": "4e8a0236cec3",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "feat: update tech stack and skills to requested frontend, backend, devops categories",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/4e8a0236cec33eeeee9be6a5001982199af3d2ff",
+      "language": "JavaScript",
+      "at": "2026-10-29T19:07:08Z"
+    },
+    {
+      "id": "2c98119f7a1a",
+      "visibility": "public",
+      "kind": "fix",
+      "message": "fix: remove private repositories, only show verified public projects",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/2c98119f7a1ab8f6c924120c07850124cb152cac",
+      "language": "JavaScript",
+      "at": "2026-10-29T18:53:16Z"
+    },
+    {
+      "id": "557c9d2e3250",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "feat: simplify hero to clean greeting and populate projects with Henox GitHub repos",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/557c9d2e3250d554aad6799703cb9272731edaed",
+      "language": "JavaScript",
+      "at": "2026-10-29T18:44:44Z"
+    },
+    {
+      "id": "bbfab62d119a",
+      "visibility": "public",
+      "kind": "fix",
+      "message": "fix: display henox badge in footer naturally without circle mask",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/bbfab62d119a131f36bd47180a9b417b978af799",
+      "language": "JavaScript",
+      "at": "2026-10-29T18:37:14Z"
+    },
+    {
+      "id": "be4ccf3a8670",
+      "visibility": "public",
+      "kind": "ci",
+      "message": "ci: configure netlify build and clean remaining ui slashes",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/be4ccf3a8670617a5a09bcb0c8500d36e3a17e43",
+      "language": "JavaScript",
+      "at": "2026-10-29T11:15:49Z"
+    },
+    {
+      "id": "4b7ba6d99e04",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "feat: henox portfolio with bilingual TR/EN support, custom branding and clean code",
+      "repo": "Henox77/henox.dev",
+      "url": "https://github.com/Henox77/henox.dev/commit/4b7ba6d99e043b923204064ecf5682e93410ea35",
+      "language": "JavaScript",
+      "at": "2026-10-29T11:04:53Z"
+    },
+    {
+      "id": "4a87de9c433f",
+      "visibility": "public",
+      "kind": "fix",
+      "message": "fix: update all favicons, site icons, brand assets and metadata to henox",
+      "repo": "Henox77/henox.app",
+      "url": "https://github.com/Henox77/henox.app/commit/4a87de9c433f953c8b3ecb2a445086f83f2f4783",
+      "language": "TypeScript",
+      "at": "2026-10-25T15:33:11Z"
+    },
+    {
+      "id": "f566a1886aee",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Clean .gitignore file",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/f566a1886aee7883ecd04c9b2cb5d5683cd43807",
+      "language": "CSS",
+      "at": "2026-08-26T15:53:38Z"
+    },
+    {
+      "id": "abb7ce7cffd2",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update site texts and README with natural human tone",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/abb7ce7cffd20d5f7999dfa51109f32fa7ed1e04",
+      "language": "CSS",
+      "at": "2026-08-26T15:51:58Z"
+    },
+    {
+      "id": "b4f20034835b",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update README.md as clean personal developer portfolio",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/b4f20034835b29ecaacbb1f17e94e27f5cc5c2fc",
+      "language": "CSS",
+      "at": "2026-08-26T15:49:06Z"
+    },
+    {
+      "id": "64985738fe37",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update robots.txt, sitemap.xml, and CSS header with henox.me domain",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/64985738fe371bcfd1b11ab63c496e4ee71cbcb4",
+      "language": "CSS",
+      "at": "2026-08-26T15:20:00Z"
+    },
+    {
+      "id": "7683b394b010",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update README.md with Henox setup guide & purge legacy project files",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/7683b394b01002e6e51edb280e970d4839595938",
+      "language": "CSS",
+      "at": "2026-08-26T15:18:05Z"
+    },
+    {
+      "id": "a814de0d3543",
+      "visibility": "public",
+      "kind": "fix",
+      "message": "fix: spotify album art display in lanyard status",
+      "repo": "Henox77/henox.app",
+      "url": "https://github.com/Henox77/henox.app/commit/a814de0d35433db4fc122b804c277d1e9664b76c",
+      "language": "TypeScript",
+      "at": "2026-08-26T14:33:26Z"
+    },
+    {
+      "id": "aab6930d4e82",
+      "visibility": "public",
+      "kind": "fix",
+      "message": "fix: add netlify config for deployment",
+      "repo": "Henox77/henox.app",
+      "url": "https://github.com/Henox77/henox.app/commit/aab6930d4e82239e99765565a84897a573751eaf",
+      "language": "TypeScript",
+      "at": "2026-08-26T14:29:59Z"
+    },
+    {
+      "id": "ce5787aed6b1",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "feat: henox personal portfolio script",
+      "repo": "Henox77/henox.app",
+      "url": "https://github.com/Henox77/henox.app/commit/ce5787aed6b1a34563744cc56f36062ea73ceea4",
+      "language": "TypeScript",
+      "at": "2026-08-26T14:22:02Z"
+    },
+    {
+      "id": "14f21df8f191",
+      "visibility": "public",
+      "kind": "fix",
+      "message": "Fix mobile responsive layout: navbar capsule, text truncation, and badges",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/14f21df8f191c1e2cb1b02c61dcd8330efb38dac",
+      "language": "CSS",
+      "at": "2026-08-25T00:09:08Z"
+    },
+    {
+      "id": "854562c63975",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Remove legacy workflows",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/854562c63975aa456ace96a129d24884746a9f2d",
+      "language": "CSS",
+      "at": "2026-08-24T23:55:39Z"
+    },
+    {
+      "id": "bab70d698599",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Deploy Henox Portfolio & Hypercord Showcase",
+      "repo": "Henox77/Henox77.github.io",
+      "url": "https://github.com/Henox77/Henox77.github.io/commit/bab70d69859926c8af0bb491481d7e4002223047",
+      "language": "CSS",
+      "at": "2026-08-24T23:55:31Z"
+    },
+    {
+      "id": "70db0e0e9d1f",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update Spotify display to plain Henox in banner",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/70db0e0e9d1fa9e05eeb6f176d0d51529996ecea",
+      "language": "Python",
+      "at": "2026-07-24T22:06:31Z"
+    },
+    {
+      "id": "0ae818d41c40",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Enable real-time Spotify and activity parameters for Lanyard",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/0ae818d41c40f1048373f312c4b90cbc30d240ef",
+      "language": "Python",
+      "at": "2026-07-24T22:05:57Z"
+    },
+    {
+      "id": "e10e5791c69d",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update Discord username to ryancherkii in banner",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/e10e5791c69ded2152a1d581da7af28a43ec4d7a",
+      "language": "Python",
+      "at": "2026-07-24T22:05:11Z"
+    },
+    {
+      "id": "58d90d320bd1",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "Add live Discord presence card to README.md",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/58d90d320bd1d7e03df16178ca4b39580e173586",
+      "language": "Python",
+      "at": "2026-07-24T21:50:02Z"
+    },
+    {
+      "id": "f76767a43bcc",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update dark.svg with Spotify info line and clean README",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/f76767a43bccd9210fc638aaf694a67e5d2ddded",
+      "language": "Python",
+      "at": "2026-07-24T21:47:57Z"
+    },
+    {
+      "id": "7b591a9d9b35",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Remove Indie Hacker role and update live Spotify/Discord renderer",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/7b591a9d9b356ac7db9e14b131a2c5365781698b",
+      "language": "Python",
+      "at": "2026-07-24T21:47:00Z"
+    },
+    {
+      "id": "fc1329c57db6",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "Add live animated Spotify and Discord activity card to README",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/fc1329c57db6e976f2aa783cd0c32b1f3fb4044b",
+      "language": "Python",
+      "at": "2026-07-24T21:44:06Z"
+    },
+    {
+      "id": "327cdf3fb822",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Set user Discord ID 1462496241693753558 for live Lanyard status",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/327cdf3fb8228a964ccfa75afd950ed5ccdfc3ea",
+      "language": "Python",
+      "at": "2026-07-24T21:42:16Z"
+    },
+    {
+      "id": "c50cec191160",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "Add dynamic live Discord Lanyard widget to README",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/c50cec19116027f8b5cbdd684f7545e3557b9a0d",
+      "language": "Python",
+      "at": "2026-07-24T21:41:39Z"
+    },
+    {
+      "id": "126850df8dcf",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update profile README banner with dark.svg",
+      "repo": "Henox77/Henox77",
+      "url": "https://github.com/Henox77/Henox77/commit/126850df8dcf2cc78c54eb4d4672be64b74b7e22",
+      "language": "Python",
+      "at": "2026-07-24T21:39:56Z"
+    },
+    {
+      "id": "4cca14e84747",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update README with dual-language documentation (Turkish & English)",
+      "repo": "Henox77/hnx-os-optimizer",
+      "url": "https://github.com/Henox77/hnx-os-optimizer/commit/4cca14e84747448dea7baa9f0ff6add090e3de95",
+      "language": "C#",
+      "at": "2026-07-09T21:41:53Z"
+    },
+    {
+      "id": "8bd67103fbda",
+      "visibility": "public",
+      "kind": "feat",
+      "message": "Add lightweight executable and direct download link to README",
+      "repo": "Henox77/hnx-os-optimizer",
+      "url": "https://github.com/Henox77/hnx-os-optimizer/commit/8bd67103fbda44a29c5d9206d10565983dda5cd8",
+      "language": "C#",
+      "at": "2026-07-09T21:32:03Z"
+    },
+    {
+      "id": "a5b3ae0c7159",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update gitignore and embed background.png in README",
+      "repo": "Henox77/hnx-os-optimizer",
+      "url": "https://github.com/Henox77/hnx-os-optimizer/commit/a5b3ae0c71594c5cc2221ea170b57441e9de975f",
+      "language": "C#",
+      "at": "2026-07-09T21:28:40Z"
+    },
+    {
+      "id": "e4054cc092f5",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Initialize HNX OS Optimizer project with 7-language support and dynamic localization",
+      "repo": "Henox77/hnx-os-optimizer",
+      "url": "https://github.com/Henox77/hnx-os-optimizer/commit/e4054cc092f59c9b01ed817d8a6ea6115cf709e1",
+      "language": "C#",
+      "at": "2026-07-09T21:27:55Z"
+    },
+    {
+      "id": "3dc8435774ee",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update config.js",
+      "repo": "Henox77/henoxwin",
+      "url": "https://github.com/Henox77/henoxwin/commit/3dc8435774ee25a9169c5fde8a7691d3376e9efa",
+      "language": "HTML",
+      "at": "2026-06-21T15:59:46Z"
+    },
+    {
+      "id": "36ec9aa220a9",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update index.html",
+      "repo": "Henox77/henoxwin",
+      "url": "https://github.com/Henox77/henoxwin/commit/36ec9aa220a9d0d42662d47e56dee19fb707d532",
+      "language": "HTML",
+      "at": "2026-06-21T00:50:00Z"
+    },
+    {
+      "id": "93b3b93942d2",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update index.html",
+      "repo": "Henox77/henoxwin",
+      "url": "https://github.com/Henox77/henoxwin/commit/93b3b93942d2fa0e191a0ca3d89797915d29f257",
+      "language": "HTML",
+      "at": "2026-06-21T00:49:13Z"
+    },
+    {
+      "id": "d07dd36a8880",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Update README with beautiful layout, features, and config details",
+      "repo": "Henox77/henoxwin",
+      "url": "https://github.com/Henox77/henoxwin/commit/d07dd36a888053f5171a6996733150d9caf130d4",
+      "language": "HTML",
+      "at": "2026-06-21T00:42:13Z"
+    },
+    {
+      "id": "7c5740fdfe87",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Initial commit - Henox Win Retro Windows XP Profile Page",
+      "repo": "Henox77/henoxwin",
+      "url": "https://github.com/Henox77/henoxwin/commit/7c5740fdfe8714fbcc6b6aa1e88efc1c027a80cc",
+      "language": "HTML",
+      "at": "2026-06-21T00:40:30Z"
+    },
+    {
+      "id": "dc5b14cd08b0",
+      "visibility": "public",
+      "kind": "other",
+      "message": "initial commit",
+      "repo": "Henox77/henoxportfolio",
+      "url": "https://github.com/Henox77/henoxportfolio/commit/dc5b14cd08b0002790d5a8a1509d961ce4365d6a",
+      "language": "TypeScript",
+      "at": "2026-06-15T20:28:21Z"
+    },
+    {
+      "id": "7159a026c5a9",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Delete tools/strip_comments.php",
+      "repo": "Henox77/cekici",
+      "url": "https://github.com/Henox77/cekici/commit/7159a026c5a9906767f04cacac751e4c528e794a",
+      "language": "PHP",
+      "at": "2026-05-22T21:49:25Z"
+    },
+    {
+      "id": "f65da081d451",
+      "visibility": "public",
+      "kind": "other",
+      "message": "initial commit",
+      "repo": "Henox77/cekici",
+      "url": "https://github.com/Henox77/cekici/commit/f65da081d451987b8556733e1580f5eda81edec3",
+      "language": "PHP",
+      "at": "2026-05-22T21:28:26Z"
+    },
+    {
+      "id": "db33356fab47",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Initial commit",
+      "repo": "Henox77/cekici",
+      "url": "https://github.com/Henox77/cekici/commit/db33356fab47f65b8fcdd57a5833811457e74c69",
+      "language": "PHP",
+      "at": "2026-05-22T21:21:23Z"
+    },
+    {
+      "id": "75296a7c4dd6",
+      "visibility": "public",
+      "kind": "other",
+      "message": "Initial commit: TikTok Milyoner Otomasyonu",
+      "repo": "Henox77/tiktokotomasyon",
+      "url": "https://github.com/Henox77/tiktokotomasyon/commit/75296a7c4dd6c5da109a05cec49c5b5368b61a77",
+      "language": "JavaScript",
+      "at": "2026-04-26T21:54:15Z"
+    }
+  ],
+  "totals": {
+    "year": 50,
+    "streak": 1
+  }
+}

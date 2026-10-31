@@ -1,0 +1,119 @@
+"use client";
+
+import { useFrame, useThree } from "@react-three/fiber";
+import { useEffect, useMemo } from "react";
+import { MathUtils, Vector3 } from "three";
+
+import { CAMERA, SCREENS } from "@/lib/layout";
+import { useScene } from "@/lib/store";
+
+/**
+ * Frame-rate independent: converges at the same rate at 30 and 144 fps.
+ *
+ * Snaps once within a tenth of a millimetre. An exponential never arrives, and
+ * a camera that keeps creeping by 1e-9 rewrites the CSS matrix of every mounted
+ * screen on every frame — the browser re-composites all three, forever.
+ */
+function dampVec(current: Vector3, target: Vector3, lambda: number, dt: number) {
+  if (current.distanceToSquared(target) < 1e-8) {
+    current.copy(target);
+    return;
+  }
+  const t = 1 - Math.exp(-lambda * dt);
+  current.lerp(target, t);
+}
+
+/**
+ * Seated camera, locked square to the desk. Deliberately not mouse-look: the
+ * screens are real text, and text that shears every time the mouse moves is text
+ * nobody reads.
+ *
+ * On focus it flies to a position computed from the panel's own size and angle
+ * rather than a hand-placed waypoint, so the fit is right at any viewport aspect
+ * and survives the layout changing.
+ */
+export function CameraRig() {
+  const camera = useThree((s) => s.camera);
+  const size = useThree((s) => s.size);
+  const focus = useScene((s) => s.focus);
+  const clearFocus = useScene((s) => s.clearFocus);
+
+  const rest = useMemo(() => new Vector3(...CAMERA.eye), []);
+  const restTarget = useMemo(() => new Vector3(...CAMERA.target), []);
+
+  // Reused every frame: allocating in useFrame is how R3F scenes develop stutter.
+  const desiredPos = useMemo(() => new Vector3(), []);
+  const desiredLook = useMemo(() => new Vector3(), []);
+  const currentLook = useMemo(() => new Vector3().copy(restTarget), [restTarget]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") clearFocus();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [clearFocus]);
+
+  useFrame((_, rawDelta) => {
+    // A backgrounded tab resumes with a huge delta and would teleport.
+    const dt = Math.min(rawDelta, 0.1);
+
+    if (focus.kind === "screen") {
+      const screen = SCREENS.find((s) => s.id === focus.id)!;
+      const [px, py, pz] = screen.position;
+
+      const vFov = MathUtils.degToRad(CAMERA.fov);
+      const aspect = size.width / size.height;
+      // Per-panel: one screen is on its side, and solving against landscape
+      // dimensions parks the camera far too close to it.
+      const forHeight = screen.panelH / 2 / Math.tan(vFov / 2);
+      const forWidth = screen.panelW / 2 / Math.tan(vFov / 2) / aspect;
+      const dist = Math.max(forHeight, forWidth) * 1.12;
+
+      const nx = Math.sin(screen.rotationY);
+      const nz = Math.cos(screen.rotationY);
+      desiredPos.set(px + nx * dist, py, pz + nz * dist);
+      desiredLook.set(px, py, pz);
+    } else {
+      // Still at rest. A few millimetres of idle drift used to sit here, and it
+      // cost more than it showed: every frame of it moved the three DOM
+      // screens, and re-compositing them was most of what made the room stutter.
+      desiredPos.copy(rest);
+      desiredLook.copy(restTarget);
+    }
+
+    // Arriving fast reads as responsive, leaving slow reads as considered.
+    const lambda = focus.kind === "none" ? 3.2 : 4.5;
+    dampVec(camera.position, desiredPos, lambda, dt);
+    dampVec(currentLook, desiredLook, lambda, dt);
+    camera.lookAt(currentLook);
+
+    // Lets screenshot tooling wait for the move to finish rather than guess.
+    if (process.env.NODE_ENV !== "production") {
+      (window as unknown as { __cameraProbe: { x: number; y: number; z: number } })
+        .__cameraProbe = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z,
+      };
+    }
+  });
+
+  useEffect(() => {
+    camera.position.set(...CAMERA.eye);
+    camera.lookAt(restTarget);
+  }, [camera, restTarget]);
+
+  // Read from the store rather than mutated through the hook's return value,
+  // which React treats as frozen.
+  const get = useThree((s) => s.get);
+  useEffect(() => {
+    const { camera } = get();
+    if ("fov" in camera) {
+      camera.fov = CAMERA.fov;
+      camera.updateProjectionMatrix();
+    }
+  }, [get]);
+
+  return null;
+}

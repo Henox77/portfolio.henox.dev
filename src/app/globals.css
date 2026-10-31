@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/*
+  The Desk — design tokens.
+
+  Warm desaturated base, exactly one accent. The room is lit warm (2700K lamp),
+  so the accent runs cool to hold the warm/cool contrast the whole art direction
+  rests on. Screens are the only saturated light in the scene.
+*/
+:root {
+  /* Room */
+  --walnut: #3d2b21;
+  --walnut-light: #5c4234;
+  --graphite: #1a1918;
+  --graphite-light: #2a2827;
+  --wall: #e4ded4;
+  --wall-shadow: #c9c1b5;
+
+  /* Screen surfaces — these are emissive, so they read brighter than the room */
+  --screen: #0e1113;
+  --screen-raised: #161a1d;
+  /* Level 2: the fill something takes when it's hovered, focused or current. */
+  --screen-hi: #1e252a;
+  --screen-line: #232a2e;
+
+  /*
+    Radius scale. See docs/ui-detailing.md.
+
+    Five steps and nothing off-scale, because radius is the loudest single
+    signal in this design and picking it per component is how a UI ends up
+    looking assembled rather than designed. The rule that holds it together:
+    a child's radius is one step below its parent's, never equal.
+  */
+  --r-chip: 6px;
+  --r-row: 10px;
+  --r-card: 16px;
+  --r-panel: 22px;
+  --ink: #e6e9ea;
+  --ink-dim: #8b9499;
+  --ink-faint: #5a6367;
+
+  /* The one accent */
+  --accent: #4ecdc4;
+  --accent-dim: #2a8f89;
+
+  /* Semantic, for the commit feed */
+  --add: #7ec699;
+  --del: #d98b8b;
+  --redact: #2f3639;
+}
+
+@theme inline {
+  --color-walnut: var(--walnut);
+  --color-graphite: var(--graphite);
+  --color-wall: var(--wall);
+  --color-screen: var(--screen);
+  --color-screen-raised: var(--screen-raised);
+  --color-screen-hi: var(--screen-hi);
+  --color-screen-line: var(--screen-line);
+
+  --radius-chip: var(--r-chip);
+  --radius-row: var(--r-row);
+  --radius-card: var(--r-card);
+  --radius-panel: var(--r-panel);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-add: var(--add);
+  --color-del: var(--del);
+  --color-redact: var(--redact);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--graphite);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  /* The canvas owns the viewport; the fallback path re-enables scrolling. */
+  overscroll-behavior: none;
+}
+
+/* Nothing in the 3D path should ever show a text cursor or selection halo. */
+canvas {
+  display: block;
+  touch-action: none;
+}
+
+/*
+  A commit arriving in the feed while you're looking at it.
+
+  Only ever applied to ids that weren't in the previous poll, so the hundred and
+  forty already on screen don't fly in on first paint — see docs/ui-detailing.md
+  §4. 320ms fade and a 6px rise, the same as a track change on the right screen.
+*/
+@keyframes commit-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-commit-in {
+  animation: commit-in 320ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+/*
+  The shell caret.
+
+  Ends on opacity 1 rather than starting there, so that the reduced-motion rule
+  below — which collapses this to a single 0.01ms iteration — leaves a visible
+  block cursor rather than an invisible one.
+*/
+@keyframes caret {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-caret {
+  animation: caret 1.1s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
